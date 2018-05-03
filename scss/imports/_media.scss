@@ -32,10 +32,14 @@
         padding: 0 20px;   
     }
 
-    .content-box {
-        width: 30%;
-        max-width: 250px;
+    .content-boxes-first, .content-boxes-second {
+        justify-content: flex-start;
+
     }
+
+    .content-box {
+        width: 50%;
+        }
 
     .content-img {
         width: 100%;
@@ -46,10 +50,24 @@
     .content-box-desc {
         width: 100%;
         text-align: center;
+        
     }
 
-    .content-box-desc h2 {
-        margin-top: 1rem;
+    .content-box-desc p {
+        padding: 0 25px 0;
+        font-size: 18px;
     }
 
+}
+
+@media screen and (min-width: 1080px) {
+    .content-box {
+        width: 30%;
+        max-width: 350px;
+    }
+
+    .content-boxes-first, .content-boxes-second {
+        justify-content: space-around;
+
+    }
 }

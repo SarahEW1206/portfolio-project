@@ -20,26 +20,48 @@ body {
 
 
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Courier New', Courier, monospace;
-    color: rgba(0,0,0,.8);
+h1, h2 {
+    font-family: 'Neuton', serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 20px;
+    color: #333;
+    margin: 0;
+}
+
+h3, h4, h5, h6 {
+    font-family: 'Neuton', serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #333;
     margin: 0;
 }
 
 p {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Neuton', serif;
     color: rgba(0,0,0,.8);
 }
 
 li {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Neuton', serif;
     color: rgba(0,0,0,.8);    
 }
 
 a {
     text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Neuton', serif;
+    font-weight: 400;
     color: rgba(0,0,0,.8);   
+}
+
+
+.vertical-align-switch {
+    display: flex;
+    align-items: center;
+
+    @media screen and (min-width: 600px) {
+        align-items: flex-start;
+    }
 }
 
 
@@ -80,7 +102,7 @@ nav {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-        transition: all 0.4s linear;
+    transition: all 0.4s linear;
     -o-transition: all 0.4s linear; 
     -webkit-transition: all 0.4s linear;
     -moz-transition: all 0.4s linear ;
@@ -101,8 +123,12 @@ nav {
 }
 
 .envelope-icon {
-    font-size: 40px;
+    font-size: 25px;
     line-height: 25px;
+}
+
+.fas {
+    font-weight: 500 !important;
 }
 
 .container {
@@ -120,18 +146,13 @@ nav {
 
 // Row 1 = header
 .header {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 12;
-    grid-column: 1 / -1;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1 / span 1;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 5rem;
     padding-bottom: 1rem;
-    width: 100%;
+    width: 90%;
+    max-width: 1080px;
     margin: 0 auto;
 }
 
@@ -165,10 +186,6 @@ nav {
     text-align: center;
 }
 
-
-
-
-
 .featured {
     -ms-grid-column: 1;
     -ms-grid-column-span: 12;
@@ -188,6 +205,10 @@ nav {
     -ms-grid-row: 4;
     -ms-grid-row-span: 1;
     grid-row: 4 / span 1; 
+}
+
+.content-heading-first h1, .content-heading-second h1 {
+    margin-top: 2rem;
 }
 
 .content-boxes-first {
@@ -249,10 +270,11 @@ nav {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin: 1rem 0;
 }
 
 .content-img {
-    width: 40%;
+    width: 30%;
     margin: 0;
 }
 
@@ -262,7 +284,7 @@ nav {
 }
 
 .content-box-desc {
-    width: 50%;
+    width: 65%;
     text-align: left;
     margin: 0 auto;
 }
