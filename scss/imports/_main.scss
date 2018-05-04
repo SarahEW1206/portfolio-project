@@ -3,6 +3,7 @@ html {
     max-width: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
+    transition: all .3s ease;
 }
 
 body {
@@ -14,17 +15,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-// nav, div, header {
-//     border: solid 1px gray;
-// }
-
-
-
 h1, h2 {
     font-family: 'Neuton', serif;
     font-weight: 700;
     letter-spacing: 1px;
-    line-height: 20px;
+    line-height: 25px;
     color: #333;
     margin: 0;
 }
@@ -54,6 +49,7 @@ a {
     color: rgba(0,0,0,.8);   
 }
 
+//For divs that are nested inside flex divs to avoid text elements being in a row. This will determine the vertical alignment of the nested div.
 
 .vertical-align-switch {
     display: flex;
@@ -63,7 +59,6 @@ a {
         align-items: flex-start;
     }
 }
-
 
 .vertical-align-center {
     display: flex;
@@ -84,17 +79,26 @@ a {
     width: 100%;
 }
 
+//Container for the grid
+.container {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 5px;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: repeat(12, 1fr);
+    -ms-grid-rows: 400px auto auto auto ;
+    grid-template-rows: 400px auto auto auto ;
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+//Navigation (not part of grid container)
 nav {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 12;
-    grid-column: 1 / -1;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1 / span 1; 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 90%;
+    width: 100%;
     max-width: 1080px;
     padding: 20px 0;
     position: fixed;
@@ -105,14 +109,14 @@ nav {
     transition: all 0.4s linear;
     -o-transition: all 0.4s linear; 
     -webkit-transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear ;
-    
+    -moz-transition: all 0.4s linear ; 
 }
 
+// to reduce height of nav on scroll
 .shrink {
     padding: 1px 0;
     background: linear-gradient(to right,  paleturquoise, yellow, paleturquoise); 
-    }
+}
   
 
 .nav-item {
@@ -131,20 +135,8 @@ nav {
     font-weight: 500 !important;
 }
 
-.container {
-    display: -ms-grid;
-    display: grid;
-    grid-gap: 5px;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-    grid-template-columns: repeat(12, 1fr);
-    -ms-grid-rows: auto auto 400px auto auto auto auto;
-    grid-template-rows: auto auto 400px auto auto auto auto;
-    width: 90%;
-    max-width: 1080px;
-    margin: 0 auto;
-}
+// Header (not part of grid container)
 
-// Row 1 = header
 .header {
     display: flex;
     flex-wrap: wrap;
@@ -173,97 +165,39 @@ nav {
 }
 
 .header-text {
-    min-width: 300px;
+    width: 340px;
     margin: 1rem auto;
 }
 
 .header-text h1, .header-text h4 {
-    margin: 0;
+    margin: 1rem 0;
+    text-align: center;
 }
 
 .header-text .vertical-centerer {
-    width: 100%;
-    text-align: center;
+    width: 100%; 
 }
+
+
+
+//Main Image/graphic
 
 .featured {
     -ms-grid-column: 1;
     -ms-grid-column-span: 12;
     grid-column: 1 / -1;
-    -ms-grid-row: 3;
+    -ms-grid-row: 1;
     -ms-grid-row-span: 1;
-    grid-row: 3 / span 1; 
+    grid-row: 1 / span 1; 
     background-image: url("/img/working.jpg");
     background-size: cover;
     background-position: 50% 50%;
 }
 
-.content-heading-first {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 12;
-    grid-column: 1 / -1;
-    -ms-grid-row: 4;
-    -ms-grid-row-span: 1;
-    grid-row: 4 / span 1; 
-}
+//Styling that applies to all sections of portfolio items. 
 
 .content-heading-first h1, .content-heading-second h1 {
     margin-top: 2rem;
-}
-
-.content-boxes-first {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 12;
-    grid-column: 1 / -1;
-    -ms-grid-row: 5;
-    -ms-grid-row-span: 1;
-    grid-row: 5 / span 1; 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-}
-
-.content-heading-second {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 12;
-    grid-column: 1 / -1;
-    -ms-grid-row: 6;
-    -ms-grid-row-span: 1;
-    grid-row: 6 / span 1; 
-}
-
-.content-boxes-second {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 12;
-    grid-column: 1 / -1;
-    -ms-grid-row: 7;
-    -ms-grid-row-span: 1;
-    grid-row: 7 / span 1; 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.content-heading-third {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 12;
-    grid-column: 1 / -1;
-    -ms-grid-row: 7;
-    -ms-grid-row-span: 1;
-    grid-row: 7 / span 1; 
-}
-
-.content-boxes-third {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 12;
-    grid-column: 1 / -1;
-    -ms-grid-row: 8;
-    -ms-grid-row-span: 1;
-    grid-row: 8 / span 1; 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .content-box {
@@ -280,7 +214,6 @@ nav {
 
 .content-img img {
     width: 100%;
-
 }
 
 .content-box-desc {
@@ -293,3 +226,88 @@ nav {
     margin-top: .75rem;
 }
 
+//Styling to position first grouping of portfolio items (section).
+
+//section heading is its own row
+.content-heading-first {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / -1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / span 1; 
+}
+
+//Each content box contains an image, a heading, a subhead and a short description paragraph.
+.content-boxes-first {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / -1;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / span 1; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+//Styling to position second grouping of portfolio items (section).
+
+//section heading is its own row
+.content-heading-second {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / -1;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / span 1; 
+}
+
+//Each content box contains an image, a heading, a subhead and a short description paragraph.
+.content-boxes-second {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / -1;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / span 1; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+//Styling to position third grouping of portfolio items (section) - if needed!
+
+//section heading is its own row
+.content-heading-third {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / -1;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6 / span 1; 
+}
+
+.content-boxes-third {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / -1;
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 1;
+    grid-row: 7 / span 1; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+//Footer (contact button will link to here)
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+
+}

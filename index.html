@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>title</title>
+    <title>Sarah's Super Portfolio!</title>
     <meta name="author" content="Sarah Waldie">
     <meta name="description" content="A super awesome portfolio project for Udacity's Front-End Nanodegree course!">
     <meta name="keywords" content="portfolio,udacity,front-end,education,awesome">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
         crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Neuton:200, 300, 400, 700, 800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Neuton:200,300,400,700,800" rel="stylesheet">
 
 
     <script src="scripts/scripts.js"></script>
@@ -35,10 +35,9 @@
         </div>
     </nav>
 
-
     <header class="header">
         <div class="header-logo">
-            <img class="header-logo-img" src="img/headshot-wall.jpg">
+            <img class="header-logo-img" src="img/headshot-wall.jpg" alt="headshot sarah waldie">
         </div>
         <div class="header-text vertical-align-bottom">
             <div class="vertical-aligner">
@@ -49,7 +48,6 @@
     </header>
 
     <main class="container">
-
         <div class="featured">
         </div>
 
@@ -57,7 +55,7 @@
             <h1>WORK</h1>
         </div>
 
-        <div class="content-boxes-first">
+        <section class="content-boxes-first">
             <div class="content-box">
                 <div class="content-img">
                     <picture>
@@ -111,13 +109,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="content-heading-second">
+        <div id="links-anchor-ref" class="content-heading-second">
             <h1>LINKS</h1>
         </div>
 
-        <div class="content-boxes-second">
+        <section class="content-boxes-second">
             <div class="content-box">
                 <div class="content-img">
                     <picture>
@@ -165,10 +163,24 @@
                     </div>
                 </div>
             </div>
+        </section>
+    </main>
+
+    <footer id="contact-anchor-ref" class="footer">
+        <div class="footer-left">
+            <a href="mailto:sarah@sassafrasbiz.com?subject=Your%20Awesome%20Portfolio!">Send me a note!</a>
+        </div>
+        <div>
+            <p>This portfolio site was designed as a project for Udacity's Front-End Nanodegree Course.
+            </p>
+        </div>
+        <div>
+            <a href="https://sassafrasbiz.com">
+                <img src="img/SBS_LOGO_NEW.jpg" alt="sassafras business services logo">
+            </a>
         </div>
 
-
-    </main>
+    </footer>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>

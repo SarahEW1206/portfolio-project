@@ -1,14 +1,17 @@
 @media screen and (min-width: 600px) {
 
+
+    //nav styling
     nav {
         justify-content: flex-end;
+        width: 90%;
     }
 
-    // .shrink {
-    //     background: linear-gradient(to right, transparent, transparent, paleturquoise, yellow, paleturquoise); 
-    // }
+    .nav-item {
+        padding: 0 20px;   
+    }
       
-      
+    //header styling
     .header-logo {
         margin: 0;
         z-index: 999999;
@@ -24,17 +27,14 @@
         margin: 0;
     }
 
-    .header-text .vertical-centerer{
+    .header-text h1, .header-text h4{ 
         text-align: right;
     }
-    
-    .nav-item {
-        padding: 0 20px;   
-    }
 
+
+    //portfolio content section styling
     .content-boxes-first, .content-boxes-second {
         justify-content: flex-start;
-
     }
 
     .content-box {
