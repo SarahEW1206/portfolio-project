@@ -53,21 +53,28 @@
     }
 
     .content-box-desc-text {
-        padding: 0 25px 0;
+        padding: 0 45px;
         font-size: 18px;
     }
 
     //footer 
     .footer {
         width: 90%;
+        justify-content: space-around;
     }
+}
 
+
+@media screen and (min-width: 800px) {
+
+    //footer 
     .footer-left {
         width: 30%;
     }
     
     .footer-middle {
         width: 30%;
+        padding: 0;
     }
     
     .footer-right {
