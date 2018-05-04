@@ -1,6 +1,5 @@
 @media screen and (min-width: 600px) {
 
-
     //nav styling
     nav {
         justify-content: flex-end;
@@ -27,7 +26,7 @@
         margin: 0;
     }
 
-    .header-text h1, .header-text h4{ 
+    .header-title, .header-subtitle { 
         text-align: right;
     }
 
@@ -53,9 +52,26 @@
         
     }
 
-    .content-box-desc p {
+    .content-box-desc-text {
         padding: 0 25px 0;
         font-size: 18px;
+    }
+
+    //footer 
+    .footer {
+        width: 90%;
+    }
+
+    .footer-left {
+        width: 30%;
+    }
+    
+    .footer-middle {
+        width: 30%;
+    }
+    
+    .footer-right {
+        width: 30%;
     }
 
 }
@@ -68,6 +84,5 @@
 
     .content-boxes-first, .content-boxes-second {
         justify-content: space-around;
-
     }
 }

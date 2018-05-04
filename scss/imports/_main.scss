@@ -3,13 +3,13 @@ html {
     max-width: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
 body {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 0px;
+    margin: 0;
     background-color: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -32,21 +32,16 @@ h3, h4, h5, h6 {
     margin: 0;
 }
 
-p {
+p, li {
     font-family: 'Neuton', serif;
-    color: rgba(0,0,0,.8);
-}
-
-li {
-    font-family: 'Neuton', serif;
-    color: rgba(0,0,0,.8);    
+    color: rgba(0,0,0,0.8);
 }
 
 a {
     text-decoration: none;
     font-family: 'Neuton', serif;
     font-weight: 400;
-    color: rgba(0,0,0,.8);   
+    color: rgba(0,0,0,0.8);   
 }
 
 //For divs that are nested inside flex divs to avoid text elements being in a row. This will determine the vertical alignment of the nested div.
@@ -100,7 +95,7 @@ nav {
     justify-content: space-around;
     width: 100%;
     max-width: 1080px;
-    padding: 20px 0;
+    padding: 30px 0;
     position: fixed;
     left: 0;
     right: 0;
@@ -114,9 +109,11 @@ nav {
 
 // to reduce height of nav on scroll
 .shrink {
-    padding: 1px 0;
-    background: linear-gradient(to right,  paleturquoise, yellow, paleturquoise); 
-}
+    padding: 8px 0;
+    background: #FEAC5E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
   
 
 .nav-item {
@@ -169,7 +166,7 @@ nav {
     margin: 1rem auto;
 }
 
-.header-text h1, .header-text h4 {
+.header-title, .header-subtitle {
     margin: 1rem 0;
     text-align: center;
 }
@@ -196,7 +193,7 @@ nav {
 
 //Styling that applies to all sections of portfolio items. 
 
-.content-heading-first h1, .content-heading-second h1 {
+.content-section-name {
     margin-top: 2rem;
 }
 
@@ -222,7 +219,7 @@ nav {
     margin: 0 auto;
 }
 
-.content-box-desc h4 {
+.content-box-desc-title {
     margin-top: .75rem;
 }
 
@@ -308,6 +305,32 @@ nav {
     justify-content: space-around;
     width: 100%;
     max-width: 1080px;
-    margin: 0 auto;
+    margin: 2rem auto 0 auto;
+    background: #FEAC5E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
+.footer-left {
+    width: 100%;
+    text-align: center;
+}
+
+.footer-middle {
+    width: 100%;
+    text-align: left;
+}
+
+.footer-right {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-sbs-logo {
+    width: 80px;
+    border: 8px solid white;
+    border-radius: 10px;
+    box-shadow: 0 2px 1px rgba(0,0,0,0.8);
 }
