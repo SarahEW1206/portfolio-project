@@ -32,6 +32,7 @@ h1 {
   background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 1px;
 }
@@ -58,12 +59,7 @@ a {
   text-decoration: none;
   font-family: 'Source Serif Pro', serif;
   font-weight: 400;
-  color: #333;
-}
-
-.vertical-align-center {
-  display: flex;
-  align-items: center;
+  color: #373737;
 }
 
 .vertical-align-top {
@@ -86,8 +82,8 @@ a {
   grid-gap: 5px;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: repeat(12, 1fr);
-  -ms-grid-rows: 400px auto auto auto;
-  grid-template-rows: 400px auto auto auto;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
   width: 100%;
   max-width: 1080px;
   margin: 0 auto;
@@ -105,15 +101,15 @@ nav {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
-  -webkit-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
+  transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
 }
 
 .shrink {
   padding: 8px 0;
-  background: #FEAC5E;
+  background-color: #FEAC5E;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);
   /* Chrome 10-25, Safari 5.1-6 */
@@ -159,7 +155,6 @@ nav {
   height: 120px;
   display: block;
   margin: 0 auto;
-  float: none;
   border-radius: 100%;
 }
 
@@ -184,9 +179,10 @@ nav {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / span 1;
-  background-image: url("/img/working.jpg");
-  background-size: cover;
-  background-position: 50% 50%;
+}
+
+.featured-img {
+  width: 100%;
 }
 
 .content-box {
@@ -383,7 +379,6 @@ nav {
   .header-logo-img {
     width: 180px;
     height: 180px;
-    float: left;
   }
   .header-text {
     margin: 0;
