@@ -3,7 +3,6 @@
     //nav styling
     nav {
         justify-content: flex-end;
-        width: 90%;
     }
 
     .nav-item {
@@ -11,6 +10,11 @@
     }
       
     //header styling
+
+    .header {
+        margin-bottom: 1.5rem;
+    }
+
     .header-logo {
         margin: 0;
         z-index: 999999;
@@ -32,12 +36,17 @@
 
 
     //portfolio content section styling
-    .content-boxes-first, .content-boxes-second {
+
+    .content-heading-first, .content-heading-second, .content-heading-third {
+        text-align: center;
+    }
+    .content-boxes-first, .content-boxes-second, .content-boxes-third {
         justify-content: flex-start;
     }
 
     .content-box {
         width: 50%;
+        display: inline-block;
         }
 
     .content-img {
@@ -48,18 +57,17 @@
     
     .content-box-desc {
         width: 100%;
-        text-align: center;
-        
+        text-align: center; 
     }
 
     .content-box-desc-text {
-        padding: 0 45px;
+        padding: 0 30px;
         font-size: 18px;
+        text-align: left;
     }
 
     //footer 
     .footer {
-        width: 90%;
         justify-content: space-around;
     }
 }
@@ -89,7 +97,18 @@
         max-width: 350px;
     }
 
-    .content-boxes-first, .content-boxes-second {
+    .content-heading-first, .content-heading-second, .content-heading-third {
+        width: 100%;
+        text-align: center;
+    }
+
+    .content-heading-first{
+        margin: 6rem 0 0 0;
+    }
+
+    .content-boxes-first, .content-boxes-second, .content-boxes-third {
         justify-content: space-around;
+        width: 100%;
+        margin: 0 0 6rem 0;
     }
 }

@@ -16,50 +16,50 @@ body {
 }
 
 h1, h2 {
-    font-family: 'Neuton', serif;
+    font-family: 'Limelight', 'Times New Roman', Times, serif;
     font-weight: 700;
     letter-spacing: 1px;
     line-height: 25px;
     margin: 0;
-    color: #333;
-    // background: #0f0c29;  /* fallback for old browsers */
-    // background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25  , Safari 5.1-6 */
-    // background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent; 
+    color: #373737;
+}
+
+h1 {
+    background: #FEAC5E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 1px;
 }
 
 h3, h4, h5, h6 {
-    font-family: 'Neuton', serif;
-    font-weight: 400;
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 700;
     letter-spacing: 1px;
     color: #333;
     margin: 0;
 }
 
+h4 {
+    color: #888;
+}
+
 p, li {
-    font-family: 'Neuton', serif;
-    color: rgba(0,0,0,0.8);
+    font-family: 'Source Serif Pro', serif;
+    color: #333;
+    font-size: 18px;
 }
 
 a {
     text-decoration: none;
-    font-family: 'Neuton', serif;
+    font-family: 'Source Serif Pro', serif;
     font-weight: 400;
-    color: rgba(0,0,0,0.8);  
+    color: #333; 
 
 }
 
 //For divs that are nested inside flex divs to avoid text elements being in a row. This will determine the vertical alignment of the nested div.
-
-.vertical-align-switch {
-    display: flex;
-    align-items: center;
-
-    @media screen and (min-width: 600px) {
-        align-items: flex-start;
-    }
-}
 
 .vertical-align-center {
     display: flex;
@@ -89,7 +89,7 @@ a {
     grid-template-columns: repeat(12, 1fr);
     -ms-grid-rows: 400px auto auto auto ;
     grid-template-rows: 400px auto auto auto ;
-    width: 90%;
+    width: 100%;
     max-width: 1080px;
     margin: 0 auto;
 }
@@ -199,6 +199,7 @@ nav {
 
 //Styling that applies to all sections of portfolio items. 
 
+//Content box = each individual portfolio item (image + text).
 .content-box {
     width: 100%;
     display: flex;
@@ -243,7 +244,8 @@ nav {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2 / span 1; 
-    margin-top: 3rem;
+    margin: 3rem auto 0 auto;
+    width: 90%;
 }
 
 //Each content box contains an image, a heading, a subhead and a short description paragraph.
@@ -257,6 +259,8 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
 }
 
 //Styling to position second grouping of portfolio items (section).
@@ -269,7 +273,8 @@ nav {
     -ms-grid-row: 4;
     -ms-grid-row-span: 1;
     grid-row: 4 / span 1; 
-    margin-top: 2rem;
+    margin: 2rem auto 0 auto;
+    width: 90%;
 }
 
 //Each content box contains an image, a heading, a subhead and a short description paragraph.
@@ -283,6 +288,8 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
 }
 
 //Styling to position third grouping of portfolio items (section) - if needed!
@@ -295,7 +302,8 @@ nav {
     -ms-grid-row: 6;
     -ms-grid-row-span: 1;
     grid-row: 6 / span 1; 
-    margin-top: 2rem;
+    margin: 2rem auto 0 auto;
+    width: 90%;
 }
 
 .content-boxes-third {
@@ -308,6 +316,8 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
 }
 
 //Footer (contact button will link to here)

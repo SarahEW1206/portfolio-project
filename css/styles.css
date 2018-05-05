@@ -16,43 +16,49 @@ body {
 }
 
 h1, h2 {
-  font-family: 'Neuton', serif;
+  font-family: 'Limelight', 'Times New Roman', Times, serif;
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 25px;
   margin: 0;
-  color: #333;
+  color: #373737;
+}
+
+h1 {
+  background: #FEAC5E;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 1px;
 }
 
 h3, h4, h5, h6 {
-  font-family: 'Neuton', serif;
-  font-weight: 400;
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 700;
   letter-spacing: 1px;
   color: #333;
   margin: 0;
 }
 
+h4 {
+  color: #888;
+}
+
 p, li {
-  font-family: 'Neuton', serif;
-  color: rgba(0, 0, 0, 0.8);
+  font-family: 'Source Serif Pro', serif;
+  color: #333;
+  font-size: 18px;
 }
 
 a {
   text-decoration: none;
-  font-family: 'Neuton', serif;
+  font-family: 'Source Serif Pro', serif;
   font-weight: 400;
-  color: rgba(0, 0, 0, 0.8);
-}
-
-.vertical-align-switch {
-  display: flex;
-  align-items: center;
-}
-
-@media screen and (min-width: 600px) {
-  .vertical-align-switch {
-    align-items: flex-start;
-  }
+  color: #333;
 }
 
 .vertical-align-center {
@@ -82,7 +88,7 @@ a {
   grid-template-columns: repeat(12, 1fr);
   -ms-grid-rows: 400px auto auto auto;
   grid-template-rows: 400px auto auto auto;
-  width: 90%;
+  width: 100%;
   max-width: 1080px;
   margin: 0 auto;
 }
@@ -224,7 +230,8 @@ nav {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2 / span 1;
-  margin-top: 3rem;
+  margin: 3rem auto 0 auto;
+  width: 90%;
 }
 
 .content-boxes-first {
@@ -237,6 +244,8 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
 }
 
 .content-heading-second {
@@ -246,7 +255,8 @@ nav {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4 / span 1;
-  margin-top: 2rem;
+  margin: 2rem auto 0 auto;
+  width: 90%;
 }
 
 .content-boxes-second {
@@ -259,6 +269,8 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
 }
 
 .content-heading-third {
@@ -268,7 +280,8 @@ nav {
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;
   grid-row: 6 / span 1;
-  margin-top: 2rem;
+  margin: 2rem auto 0 auto;
+  width: 90%;
 }
 
 .content-boxes-third {
@@ -281,6 +294,8 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
 }
 
 .footer {
@@ -354,10 +369,12 @@ nav {
 @media screen and (min-width: 600px) {
   nav {
     justify-content: flex-end;
-    width: 90%;
   }
   .nav-item {
     padding: 0 20px;
+  }
+  .header {
+    margin-bottom: 1.5rem;
   }
   .header-logo {
     margin: 0;
@@ -374,11 +391,15 @@ nav {
   .header-title, .header-subtitle {
     text-align: right;
   }
-  .content-boxes-first, .content-boxes-second {
+  .content-heading-first, .content-heading-second, .content-heading-third {
+    text-align: center;
+  }
+  .content-boxes-first, .content-boxes-second, .content-boxes-third {
     justify-content: flex-start;
   }
   .content-box {
     width: 50%;
+    display: inline-block;
   }
   .content-img {
     width: 100%;
@@ -390,11 +411,11 @@ nav {
     text-align: center;
   }
   .content-box-desc-text {
-    padding: 0 45px;
+    padding: 0 30px;
     font-size: 18px;
+    text-align: left;
   }
   .footer {
-    width: 90%;
     justify-content: space-around;
   }
 }
@@ -417,8 +438,17 @@ nav {
     width: 30%;
     max-width: 350px;
   }
-  .content-boxes-first, .content-boxes-second {
+  .content-heading-first, .content-heading-second, .content-heading-third {
+    width: 100%;
+    text-align: center;
+  }
+  .content-heading-first {
+    margin: 6rem 0 0 0;
+  }
+  .content-boxes-first, .content-boxes-second, .content-boxes-third {
     justify-content: space-around;
+    width: 100%;
+    margin: 0 0 6rem 0;
   }
 }
 

@@ -11,7 +11,12 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
         crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Neuton:200,300,400,700,800" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Neuton:200,300,400,700,800" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Limelight:400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700" rel="stylesheet">
+
+
+
 
 
     <script src="scripts/scripts.js"></script>
@@ -26,7 +31,10 @@
             <a href="#work-anchor-ref">Work</a>
         </div>
         <div class="nav-item">
-            <a href="#links-anchor-ref">Links</a>
+            <a href="#links-anchor-ref">Social</a>
+        </div>
+        <div class="nav-item">
+            <a href="#blogs-anchor-ref">Blogs</a>
         </div>
         <div class="nav-item">
             <a class="envelope-icon" href="mailto:sarah@sassafrasbiz.com?subject=Your%20Awesome%20Portfolio!" target="_blank">
@@ -42,7 +50,7 @@
         <div class="header-text vertical-align-bottom">
             <div class="vertical-aligner">
                 <h1 class="header-title">SARAH E. WALDIE</h1>
-                <h4 class="header-subtitle">Coding Mama</h4>
+                <h3 class="header-subtitle">Coding Mama</h3>
             </div>
         </div>
     </header>
@@ -50,6 +58,9 @@
     <main class="container">
         <div class="featured">
         </div>
+
+
+        <!-- First Portfolio Row: WORK -->
 
         <div id="work-anchor-ref" class="content-heading-first">
             <h1>WORK</h1>
@@ -66,10 +77,12 @@
                         <img src="img/freelance-275.jpg" srcset="img/freelance-275.jpg" alt="website mockup images">
                     </picture>
                 </div>
-                <div class="content-box-desc vertical-align-switch">
+                <div class="content-box-desc vertical-align-top">
                     <div class="vertical-aligner">
-                        <h2 class="content-box-desc-title">Freelance</h2>
-                        <h4 class="content-box-desc-subtitle">sassafrasbiz.com</h4>
+                        <a href="https://sassafrasbiz.com" target="_blank">
+                            <h2 class="content-box-desc-title">My Site</h2>
+                            <h4 class="content-box-desc-subtitle">sassafrasbiz.com</h4>
+                        </a>
                         <p class="content-box-desc-text">A single-page app site developed from scratch (using AngularJS for page transitions) for my freelance
                             business.
                         </p>
@@ -80,17 +93,16 @@
             <div class="content-box">
                 <div class="content-img">
                     <picture>
-                        <source media="(min-width: 1080px)" srcset="img/freelance-combo-400x300.jpg">
-                        <source media="(min-width: 600px)" srcset="img/freelance-400x300.jpg">
-                        <img src="img/freelance-275.jpg" srcset="img/freelance-275.jpg" alt="website mockup images">
+                        <source media="(min-width: 1080px)" srcset="img/alter-combo-400x300.jpg">
+                        <source media="(min-width: 600px)" srcset="img/alter-400x300.jpg">
+                        <img src="img/alter-mobile.jpg" srcset="img/alter-mobile.jpg" alt="website mockup images">
                     </picture>
                 </div>
-                <div class="content-box-desc vertical-align-switch">
+                <div class="content-box-desc vertical-align-top">
                     <div class="vertical-aligner">
-                        <h2 class="content-box-desc-title">Highlight</h2>
+                        <h2 class="content-box-desc-title">Featured Client</h2>
                         <h4 class="content-box-desc-subtitle">altersurety.com</h4>
-                        <p class="content-box-desc-text">Rebuilt a WordPress site in a new theme to fix broken elements, enhance design and implement better
-                            security.
+                        <p class="content-box-desc-text">Rebuild of a WordPress site in a new theme to fix broken elements, enhance design and improve security.
                         </p>
                     </div>
                 </div>
@@ -98,23 +110,26 @@
             <div class="content-box">
                 <div class="content-img">
                     <picture>
-                        <source media="(min-width: 1080px)" srcset="img/freelance-combo-400x300.jpg">
-                        <source media="(min-width: 600px)" srcset="img/freelance-400x300.jpg">
-                        <img src="img/freelance-275.jpg" srcset="img/freelance-275.jpg" alt="website mockup images">
+                        <source media="(min-width: 1080px)" srcset="img/redeploy-combo-400x300.jpg">
+                        <source media="(min-width: 600px)" srcset="img/redeploy-400x300.jpg">
+                        <img src="img/redeploy-mobile.jpg" srcset="img/redeploy-mobile.jpg" alt="website mockup images">
                     </picture>
                 </div>
-                <div class="content-box-desc vertical-align-switch">
+                <div class="content-box-desc vertical-align-top">
                     <div class="vertical-aligner">
-                        <h2 class="content-box-desc-title">Highlight</h2>
+                        <h2 class="content-box-desc-title">Featured Client</h2>
                         <h4 class="content-box-desc-subtitle">re-deploy.io</h4>
-                        <p class="content-box-desc-text">A tech conference site built from scratch (in 3 days!) using HTML, CSS, JavaScript and jQuery.</p>
+                        <p class="content-box-desc-text">A tech conference site built from scratch (in 3 days!) using HTML, CSS, JavaScript and jQuery.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Second Portfolio Row: LINKS -->
+
         <div id="links-anchor-ref" class="content-heading-second">
-            <h1>LINKS</h1>
+            <h1>SOCIAL</h1>
         </div>
         <!-- TODO: create and load additional images and replace placeholders -->
         <!-- TODO: update links to sites/profiles -->
@@ -148,6 +163,64 @@
                     <div class="vertical-aligner">
                         <h2 class="content-box-desc-title">LinkedIn</h2>
                         <h4 class="content-box-desc-subtitle">Sarah Waldie</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="content-box">
+                <div class="content-img">
+                    <picture>
+                        <source media="(min-width: 1080px)" srcset="img/linkedin-large.jpg">
+                        <source media="(min-width: 600px)" srcset="img/linkedin-large.jpg">
+                        <img src="img/freelance-275.jpg" srcset="img/linkedin-mobile.jpg" alt="linkedin images">
+                    </picture>
+                </div>
+                <div class="content-box-desc vertical-align-center">
+                    <div class="vertical-aligner">
+                        <h2 class="content-box-desc-title">Instagram</h2>
+                        <h4 class="content-box-desc-subtitle">@sassafrasbiz</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Third Portfolio Row: BLOGS -->
+
+        <div id="blogs-anchor-ref" class="content-heading-third">
+            <h1>BLOGS</h1>
+        </div>
+
+        <!-- TODO: create and load additional images and replace placeholders -->
+        <!-- TODO: update links to sites/profiles -->
+        <section class="content-boxes-third">
+            <div class="content-box">
+                <div class="content-img">
+                    <picture>
+                        <source media="(min-width: 1080px)" srcset="img/linkedin-large.jpg">
+                        <source media="(min-width: 600px)" srcset="img/linkedin-large.jpg">
+                        <img src="img/freelance-275.jpg" srcset="img/linkedin-mobile.jpg" alt="linkedin images">
+                    </picture>
+                </div>
+                <div class="content-box-desc vertical-align-center">
+                    <div class="vertical-aligner">
+                        <a href="https://theloveofsweat.me" target="_blank">
+                            <h2 class="content-box-desc-title">The Love of Sweat</h2>
+                            <h4 class="content-box-desc-subtitle">Motherhood, running, etc.</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content-box">
+                <div class="content-img">
+                    <picture>
+                        <source media="(min-width: 1080px)" srcset="img/linkedin-large.jpg">
+                        <source media="(min-width: 600px)" srcset="img/linkedin-large.jpg">
+                        <img src="img/freelance-275.jpg" srcset="img/linkedin-mobile.jpg" alt="linkedin images">
+                    </picture>
+                </div>
+                <div class="content-box-desc vertical-align-center">
+                    <div class="vertical-aligner">
+                        <h2 class="content-box-desc-title">Lincoln Waldie</h2>
+                        <h4 class="content-box-desc-subtitle">All about the baby</h4>
                     </div>
                 </div>
             </div>
