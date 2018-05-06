@@ -53,6 +53,12 @@
         display: block;
         margin: 0 auto;
     }
+
+    .vertical-align-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     
     .content-box-desc {
         width: 100%;
